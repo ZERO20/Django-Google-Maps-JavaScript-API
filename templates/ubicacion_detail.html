@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Aplicacion en django y google maps {% endblock %}
+{% block container %}
+	<div align="center">
+		<h1>Ubicación {{ ubicacion.nombre }}</h1>
+		<table cellspacing="10" cellpadding="10" border="1" width="600">
+			<tr>
+				<th style="color:white;background-color:grey">Nombre</th>
+				<td>{{ ubicacion.nombre }}</td>
+			</tr>
+			<tr>
+				<th style="color:white;background-color:grey">Usuario</th>
+				<td>{{ ubicacion.user }}</td>
+			</tr>
+			<tr>
+				<th style="color:white;background-color:grey">Fecha</th>
+				<td>{{ ubicacion.fecha }}</td>
+			</tr>
+			<tr>
+			</tr>
+		</table>
+	</div>
+{% endblock %}
