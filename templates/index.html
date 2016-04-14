@@ -1,22 +1,24 @@
 {% extends 'base.html' %}
 {% block title %}Aplicacion en django y google maps {% endblock %}
 {% block container %}
-    <div id="mapa" class="capas"></div>
-    <div id="datos" class="capas">
-        <div id="form">
-            <form action="" method="post" id="form_coords">{% csrf_token %}
-                {{ form.as_p }}
-                <p>
-                    <input type="submit" value="Guardar Ubicación"/>
-                </p>
-            </form>
-        </div>
-        <div id="data">
-            <ul id="ubicaciones">
-                {% for ubicacion in ubicaciones %}
-                 <li>{{ ubicacion.nombre }} {{ ubicacion.user }} - hace {{ ubicacion.fecha|timesince }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
+	<div class="container">
+		<div id="mapa" class="capas"></div>
+		<div id="datos" class="capas">
+			<div id="form">
+				<form action="" method="post" id="form_coords">{% csrf_token %}
+					{{ form.as_p }}
+					<p>
+						<input type="submit" value="Guardar Ubicación"/>
+					</p>
+				</form>
+			</div>
+			<div id="data">
+				<ul id="ubicaciones">
+					{% for ubicacion in ubicaciones %}
+						<li>{{ ubicacion.nombre }} {{ ubicacion.user }} - hace {{ ubicacion.fecha|timesince }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
 {% endblock %}

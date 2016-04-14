@@ -10,11 +10,8 @@
 	<script src="{{ STATICFILES_DIRS }}/static/js/select2-3.2.js"></script>
 </head>
 <body>
-<div class="container">
 	{% block container %}
 	{% endblock %}
-</div>
-
 {#El valor del parámetro sensor puede ser true o false. Normalmente sensor = false, al menos que queramos determinar la ubicación mediante geolocalizaciónstar. En este caso sensor = true#}
 <!--<script src="http://maps.google.com/maps/api/js?sensor=true&;amp;language=es"></script>--><!-- Api de google-->
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>--><!--url para google maps api con tu key-->

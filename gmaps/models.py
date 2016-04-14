@@ -1,8 +1,6 @@
 #encoding:utf-8
-from django import forms
 from django.db import models
 from django.contrib.auth.models import User
-from django.forms import ModelForm
 
 class Ubicacion(models.Model):
 	nombre = models.CharField(max_length=200)
@@ -14,12 +12,3 @@ class Ubicacion(models.Model):
 	def __unicode__(self):
 		return self.nombre
 
-class UbicacionForm(ModelForm):
-	class Meta:
-		model = Ubicacion
-		widgets = {
-			'nombre': forms.TextInput(attrs={'placeholder':'Nombre de la ubicación'}),
-			'lat': forms.TextInput(attrs={'placeholder':'Latitud'}),
-			'lng': forms.TextInput(attrs={'placeholder':'Longitud'}),
-			'user': forms.Select(attrs={'class':'select-select2 span12'}),
-		}

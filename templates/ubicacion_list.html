@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Aplicacion en django y google maps {% endblock %}
+{% block container %}
+	<div align="center">
+		<h1>Lista de ubicaciones guardadas</h1>
+		<table cellspacing="0" cellpadding="1" border="1" width="600">
+			<tr style="color:white;background-color:grey">
+				<th>Nombre</th>
+				<th>Usuario</th>
+				<th>Fecha</th>
+				<th>Opciones</th>
+			</tr>
+			{% for ubicacion in ubicaciones %}
+				<tr>
+					<td>{{ ubicacion.nombre }}</td>
+					<td>{{ ubicacion.user }}</td>
+					<td>{{ ubicacion.fecha }}</td>
+					<td><a href="{% url 'detalle-ubicacion' ubicacion.pk %}">Detalle</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Editar</a></td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endblock %}
