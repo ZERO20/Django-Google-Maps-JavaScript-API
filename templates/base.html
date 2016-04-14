@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+	<script src="{{ STATICFILES_DIRS }}/static/js/jquery.min.js"></script>
+	<!-- Jquery-->
+	<link rel="stylesheet" href="{{ STATICFILES_DIRS }}/static/css/style.css">
+	<link href="{{ STATICFILES_DIRS }}/static/css/select2-3.2.css" rel="stylesheet"/>
+	<script src="{{ STATICFILES_DIRS }}/static/js/select2-3.2.js"></script>
+</head>
+<body>
+<div class="container">
+	{% block container %}
+	{% endblock %}
+</div>
+
+{#El valor del parámetro sensor puede ser true o false. Normalmente sensor = false, al menos que queramos determinar la ubicación mediante geolocalizaciónstar. En este caso sensor = true#}
+<!--<script src="http://maps.google.com/maps/api/js?sensor=true&;amp;language=es"></script>--><!-- Api de google-->
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>--><!--url para google maps api con tu key-->
+<script type="text/javascript" src="{{ STATICFILES_DIRS }}/static/js/maps.js/?sensor=true&;amp;language=es"></script><!-- Api de google-->
+<script src="{{ STATICFILES_DIRS }}/static/js/scripts.js"></script><!-- script de objeto maps-->
+
+</body>
+</html>
+

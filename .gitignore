@@ -1,0 +1,10 @@
+*.pyo
+*.pyc
+mapa/settings.py
+mapa/wsgi.py
+media
+media/*
+.idea
+.idea/*
+.idea/workspace.xml
+*.xml
